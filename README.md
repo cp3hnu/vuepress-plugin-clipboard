@@ -5,9 +5,9 @@ A plugin for Vuepress that appends a copy button to every instance of a given se
 ## Installation
 
 ```
-$ npm install vuepress-plugin-code-copy
+$ npm install vuepress-plugin-clipboard
 # OR
-$ yarn add vuepress-plugin-code-copy
+$ yarn add vuepress-plugin-clipboard
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ The plugin can be added to `.vuepress/config.js` in your Vuepress project under 
 
 ```javascript
 module.exports = {
-    plugins: [['vuepress-plugin-code-copy', true]]
+    plugins: [['vuepress-plugin-clipboard', {}]]
 }
 ```
 
@@ -27,13 +27,14 @@ The plugin takes a number of options, which can be passed in with the plugin con
 ```
 module.exports = {
   plugins: [
-    ["vuepress-plugin-code-copy", {
+    ["vuepress-plugin-clipboard", {
         selector: String,
         align: String,
         color: String,
         backgroundTransition: Boolean,
         backgroundColor: String,
-        successText: String
+        successText: String,
+        isHover: Boolean
         }
     ]
   ]
@@ -43,7 +44,7 @@ module.exports = {
 ### selector
 
 -   Type: `String`
--   Default: `div[class*="language-"] pre`
+-   Default: `div[class*="language-"]`
 
 This is the **CSS** [selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors) to which the copy button component will be attached.
 
@@ -83,7 +84,7 @@ This sets the color of the background transition animation and can take any [hex
 
 This sets the text that displays when a user presses the copy button.
 
-### staticIcon
+### isHover
 
 -   Type: `Boolean`
 -   Default: `false`
