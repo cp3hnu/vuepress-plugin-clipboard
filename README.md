@@ -1,6 +1,10 @@
 # Vuepress Copy Code to Clipboard Plugin
 
-A plugin for Vuepress that appends a copy button to every instance of a given selector (defaults to `div[class*="language-"] pre`)
+Fix bugs in [znicholasbrown/vuepress-plugin-code-copy](https://github.com/znicholasbrown/vuepress-plugin-code-copy)
+
+## View
+
+https://www.joylearn123.com/2024/08/08/jscodeshift/
 
 ## Installation
 
